@@ -7,8 +7,8 @@ export class AuthService {
     constructor(private readonly jwtService: JwtService) {}
     createToken(user: object, options?: SignOptions) {
         const token = this.jwtService.sign(user, options);
-        const result = this.jwtService.verify(token);
-        console.log(result);
+        // const result = this.jwtService.verify(token);
+        // console.log(result);
         return token;
     }
 
