@@ -1,0 +1,50 @@
+{
+  "name": "@quickts/nestjs-auth",
+  "version": "1.0.0",
+  "description": "A quickts project",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "rimraf dist && tsc -p tsconfig.json",
+    "start": "ts-node -r tsconfig-paths/register src/index.ts",
+    "start:dev": "ts-node -r tsconfig-paths/register src/index.ts",
+    "start:prod": "node dist/index.js",
+    "test": "mocha -r tsconfig-paths/register -r ts-node/register --recursive -R spec test/*.ts"
+  },
+  "keywords": [
+    "quickts",
+    "nestjs-auth"
+  ],
+  "author": "quickts",
+  "license": "MIT",
+  "devDependencies": {
+    "@nestjs/common": "^6.2.2",
+    "@nestjs/core": "^6.2.2",
+    "@nestjs/platform-express": "^6.2.2",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^12.0.0",
+    "@types/passport-jwt": "^3.0.1",
+    "mocha": "^6.1.4",
+    "rimraf": "^2.6.3",
+    "rxjs": "^6.5.2",
+    "ts-node": "^8.1.0",
+    "tsconfig-paths": "^3.8.0",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "@nestjs/jwt": "^6.1.0",
+    "@nestjs/passport": "^6.1.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "reflect-metadata": "^0.1.13"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quickts/nestjs-auth.git"
+  },
+  "bugs": "https://github.com/quickts/nestjs-auth/issues",
+  "homepage": "https://github.com/quickts/nestjs-auth#readme"
+}
