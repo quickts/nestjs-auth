@@ -8,13 +8,13 @@ import { JwtStrategy } from "./jwt.strategy";
 @Global()
 @Module({})
 export class AuthModule {
-    static forRoot(options: JwtModuleOptions): DynamicModule {
-        const optionProvider = createAuthOptionProvider(options.publicKey || options.secret);
+    static forRoot(options: JwtModuleOptions | string): DynamicModule {
+        const optionProvider = createAuthOptionProvider(typeof options == "string" ? options : options.publicKey || options.secret);
         return {
             module: AuthModule,
             providers: [optionProvider, AuthService, JwtStrategy],
             exports: [AuthService],
-            imports: [PassportModule.register({}), JwtModule.register(options)]
+            imports: [PassportModule.register({}), JwtModule.register(typeof options == "string" ? { secret: options } : options)]
         };
     }
 }
