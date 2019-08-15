@@ -24,7 +24,7 @@ export class AuthGlobalModule {
     static forRoot(options: JwtModuleOptions | string): DynamicModule {
         const optionProvider = createAuthOptionProvider(typeof options == "string" ? options : options.publicKey || options.secret);
         return {
-            module: AuthModule,
+            module: AuthGlobalModule,
             providers: [optionProvider, AuthService, JwtStrategy],
             exports: [AuthService],
             imports: [PassportModule.register({}), JwtModule.register(typeof options == "string" ? { secret: options } : options)]
