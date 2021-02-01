@@ -1,6 +1,6 @@
 {
   "name": "@quickts/nestjs-auth",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "A quickts project",
   "main": "dist/index.js",
   "scripts": {
@@ -18,28 +18,29 @@
   "author": "quickts",
   "license": "MIT",
   "devDependencies": {
-    "@nestjs/common": "^6.5.3",
-    "@nestjs/core": "^6.5.3",
-    "@nestjs/platform-express": "^6.5.3",
-    "@types/mocha": "^5.2.7",
-    "@types/node": "^12.7.1",
-    "@types/passport-jwt": "^3.0.1",
-    "mocha": "^6.2.0",
-    "rimraf": "^2.6.3",
-    "rxjs": "^6.5.2",
-    "ts-node": "^8.3.0",
-    "tsconfig-paths": "^3.8.0",
-    "typescript": "^3.5.3",
+    "@nestjs/common": "^7.6.7",
+    "@nestjs/core": "^7.6.7",
+    "@nestjs/platform-express": "^7.6.7",
+    "@types/mocha": "^8.2.0",
+    "@types/node": "^14.14.22",
+    "@types/passport-jwt": "^3.0.3",
+    "mocha": "^8.2.1",
+    "rimraf": "^3.0.2",
+    "rxjs": "^6.6.3",
+    "ts-node": "^9.1.1",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.1.3",
     "reflect-metadata": "^0.1.13"
   },
   "dependencies": {
-    "@nestjs/jwt": "^6.1.1",
-    "@nestjs/passport": "^6.1.0",
-    "passport": "^0.4.0",
+    "@nestjs/jwt": "^7.2.0",
+    "@nestjs/passport": "^7.1.5",
+    "passport": "^0.4.1",
     "passport-jwt": "^4.0.0"
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "repository": {
     "type": "git",
